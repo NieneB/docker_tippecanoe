@@ -1,12 +1,10 @@
 
-## What is TippeCanoe? 
+## TippeCanoe 
 
-Developed by Mapbox. 
-Builds vector tilesets from large (or small) collections of GeoJSON features.
+Tippecanoe is developed by Mapbox. It builds vector tilesets from large (or small) collections of GeoJSON features.
+For original source and commands see: https://github.com/mapbox/tippecanoe
 
-https://github.com/mapbox/tippecanoe
-
-This docker installs TippeCanoe in a docker container with command `TippeCanoe` so you can use docker to run the TippeCanoe commands.
+This docker installs TippeCanoe in a docker container with entrypoint  `tippecanoe` so you can use docker to run the TippeCanoe command.
 
 How to build:
 
@@ -20,5 +18,7 @@ To run tippecanoe with options:
 
 	docker run --rm -v `pwd`/data_tiles:/data_tiles niene/tippecanoe  -o out.mbtiles [and other tippecanoe commands]
 
-	docker run --rm -v `pwd`/data_tiles:/data_tiles niene/tippecanoe  -o data_tiles/test.mbtiles /data_tiles/bgt_pand.geojson  
+	docker run --rm -v `pwd`/data_tiles:/data_tiles niene/tippecanoe  -o data_tiles/test.mbtiles /data_tiles/test.geojson 
+
+See https://github.com/mapbox/tippecanoe for all the TippeCanoe options!  
 
